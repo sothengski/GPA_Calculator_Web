@@ -1,0 +1,135 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-container {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  margin-top: 5px;
+}
+
+button {
+  background-color: #6fb262;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#courseSummary {
+  margin-top: 20px;
+  position: relative;
+}
+
+.summary-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.summary-buttons button {
+  margin-left: 10px;
+}
+
+button#saveButton {
+  background-color: #52a2c5;
+}
+
+#courseList {
+  margin-top: 20px;
+}
+
+#courseList ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#courseList li {
+  margin-bottom: 5px;
+}
+
+#result {
+  margin-top: 10px;
+}
+
+/* (Your existing CSS styles remain the same) */
+
+#courseSummary {
+  margin-top: 20px;
+}
+
+#courseTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+#courseTable th,
+#courseTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+#courseTable th {
+  background-color: #49616c;
+  color: white;
+}
+
+/* .buttons-container {
+  display: flex;
+  gap: 10px; 
+} 
+*/
+
+/* Center the buttons and update their color */
+#courseTable button {
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  background-color: #cd7c57;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin: 0 auto; /* Center the buttons */
+}
+
+#courseTable button i {
+  margin-right: 5px;
+}
+
+#courseTable button.edit {
+  background-color: #ff8c00; /* Update color for the Edit button to orange */
+}
+
+#courseTable button.delete {
+  background-color: #e74c3c; /* Update color for the Delete button to red */
+}
