@@ -144,51 +144,64 @@ function updateCourseList() {
   const courseTableBody = document
     .getElementById("courseTable")
     .getElementsByTagName("tbody")[0];
+
+  // Clear the table body
   courseTableBody.innerHTML = "";
 
-  //   courses.forEach((course) => {
-  courses.forEach((course, index) => {
-    const row = courseTableBody.insertRow();
-    const cell1 = row.insertCell(0);
-    const cell2 = row.insertCell(1);
-    const cell3 = row.insertCell(2);
-    const cell4 = row.insertCell(3);
+  if (courses.length === 0) {
+    // Show the message row
+    // Add a "No Courses" message row
+    const noCourseRow = courseTableBody.insertRow();
+    const noCourseCell = noCourseRow.insertCell();
+    noCourseCell.colSpan = 4; // Set colspan to the number of columns in your table
+    noCourseCell.textContent = "No Courses";
+    noCourseCell.style.textAlign = "center"; // Center the text
+  } else {
+    // Render courses
+    //   courses.forEach((course) => {
+    courses.forEach((course, index) => {
+      const row = courseTableBody.insertRow();
+      const cell1 = row.insertCell(0);
+      const cell2 = row.insertCell(1);
+      const cell3 = row.insertCell(2);
+      const cell4 = row.insertCell(3);
 
-    cell1.textContent = course.name;
-    cell2.textContent = course.credit;
-    cell3.textContent = course.grade;
+      cell1.textContent = course.name;
+      cell2.textContent = course.credit;
+      cell3.textContent = course.grade;
 
-    // Create a div to wrap the Edit and Delete buttons
-    // const buttonsContainer = document.createElement("div");
-    // buttonsContainer.classList.add("buttons-container");
+      // Create a div to wrap the Edit and Delete buttons
+      // const buttonsContainer = document.createElement("div");
+      // buttonsContainer.classList.add("buttons-container");
 
-    // Add Edit button
-    const editButton = document.createElement("button");
-    // editButton.setAttribute("id", "editButton");
-    editButton.classList.add("edit");
+      // Add Edit button
+      const editButton = document.createElement("button");
+      // editButton.setAttribute("id", "editButton");
+      editButton.classList.add("edit");
 
-    // editButton.textContent = "Edit";
-    editButton.innerHTML = '<i class="fas fa-edit"></i>';
-    editButton.addEventListener("click", () => editCourse(index));
-    cell4.appendChild(editButton);
-    // buttonsContainer.appendChild(editButton);
+      // editButton.textContent = "Edit";
+      editButton.innerHTML = '<i class="fas fa-edit"></i>';
+      editButton.addEventListener("click", () => editCourse(index));
+      cell4.appendChild(editButton);
+      // buttonsContainer.appendChild(editButton);
 
-    // Add Delete button
-    const deleteButton = document.createElement("button");
-    // editButton.setAttribute("id", "deleteButton");
-    deleteButton.classList.add("delete");
+      // Add Delete button
+      const deleteButton = document.createElement("button");
+      // editButton.setAttribute("id", "deleteButton");
+      deleteButton.classList.add("delete");
 
-    // deleteButton.textContent = "Delete";
-    deleteButton.innerHTML = '<i class="fas fa-trash-alt"></i>';
-    deleteButton.addEventListener("click", () => deleteCourse(index));
-    cell4.appendChild(deleteButton);
-    // buttonsContainer.appendChild(deleteButton);
+      // deleteButton.textContent = "Delete";
+      deleteButton.innerHTML = '<i class="fas fa-trash-alt"></i>';
+      deleteButton.addEventListener("click", () => deleteCourse(index));
+      cell4.appendChild(deleteButton);
+      // buttonsContainer.appendChild(deleteButton);
 
-    // Append the buttons container to the cell
-    // cell4.appendChild(buttonsContainer);
+      // Append the buttons container to the cell
+      // cell4.appendChild(buttonsContainer);
 
-    // console.log(index);
-  });
+      // console.log(index);
+    });
+  }
 
   //   console.log("UpdateList");
 }
