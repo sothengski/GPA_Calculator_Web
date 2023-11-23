@@ -18,7 +18,6 @@ A simple GPA (Grade Point Average) calculator implemented with HTML, CSS, and Ja
    cd GPA_Calculator_Web
 
 ## File Structure
-
 ```plaintext
 GPA_Calculator_Web/
 │
@@ -26,6 +25,18 @@ GPA_Calculator_Web/
 ├── styles.css
 ├── script.js
 └── README.md
+```
+
+## Screenshots
+
+Add Course
+![Screenshot]([Add.png](https://github.com/sothengski/GPA_Calculator_Web/blob/f6438820e605f17759ba56874722ccbdecf762c5/Add.png))
+
+Edit Course
+![Screenshot]([Edit.png](https://github.com/sothengski/GPA_Calculator_Web/blob/f6438820e605f17759ba56874722ccbdecf762c5/Edit.png))
+
+Delete Course
+![Screenshot]([Delete.png](https://github.com/sothengski/GPA_Calculator_Web/blob/f6438820e605f17759ba56874722ccbdecf762c5/Delete.png))
 
 ## Example JSON Object:
 
@@ -47,12 +58,4 @@ GPA_Calculator_Web/
   "cgpa": 3.85,
   "credits": 5
 }
-
-Add Course
-![Screenshot](https://github.com/sothengski/GPA_Calculator_Web/blob/main/Add.png)
-
-Edit Course
-![Screenshot](https://github.com/sothengski/GPA_Calculator_Web/blob/main/Edit.png)
-
-Delete Course
-![Screenshot](https://github.com/sothengski/GPA_Calculator_Web/blob/main/Delete.png)
+```
