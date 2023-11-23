@@ -2,7 +2,7 @@ body {
   font-family: Arial, sans-serif;
   /* background-color: #f4f4f4; */
   background-color: #b8c6db;
-  background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 100%);
+  background-image: linear-gradient(315deg, #b8c6db 0%, #b8c8e0 100%);
   /* display: flex; */
   align-items: center;
   justify-content: center;
@@ -13,6 +13,9 @@ body {
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
   max-width: 600px;
   margin: 50px auto;
   background-color: #fff;
@@ -24,11 +27,37 @@ body {
 
 .input-container {
   margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  /* width: 90%; */
+}
+
+.input-group {
+  margin-left: 10px;
+  width: 65%; /* Adjust the width as needed */
+}
+
+#GPAScaleTable {
+  width: 80%;
+  border-collapse: collapse;
+  margin: 5px auto;
+}
+
+#GPAScaleTable th,
+#GPAScaleTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+#GPAScaleTable th {
+  background-color: #3a5884;
+  color: white;
 }
 
 label {
   display: block;
-  margin-bottom: 5px;
+  /* margin-bottom: 2px; */
 }
 
 input,
@@ -37,6 +66,7 @@ select {
   padding: 8px;
   box-sizing: border-box;
   margin-top: 5px;
+  margin-bottom: 15px;
 }
 
 button {
@@ -52,11 +82,6 @@ button:hover {
   background-color: #45a049;
 }
 
-#courseSummary {
-  margin-top: 20px;
-  position: relative;
-}
-
 .summary-header {
   display: flex;
   justify-content: space-between;
@@ -68,39 +93,8 @@ button:hover {
   margin-left: 10px;
 }
 
-button#saveButton {
-  background-color: #52a2c5;
-  /* display: flex; */
-  justify-content: center;
-  align-items: center;
-  color: white;
-  border: none;
-  /* padding: 10px 10px; */
-  cursor: pointer;
-  margin: 5px; /* Center the buttons */
-}
-
-#courseList {
-  margin-top: 20px;
-}
-
-#courseList ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-#courseList li {
-  margin-bottom: 5px;
-}
-
-#result {
-  margin-top: 10px;
-}
-
-/* (Your existing CSS styles remain the same) */
-
 #courseSummary {
-  margin-top: 20px;
+  margin-top: 5px;
 }
 
 #courseSummary button {
@@ -120,10 +114,35 @@ button#saveButton {
   margin-left: 5px;
 }
 
+button#saveButton {
+  background-color: #52a2c5;
+}
+
+button#importButton {
+  background-color: #45a049;
+}
+
+#courseList {
+  margin-top: 20px;
+}
+
+#courseList ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#courseList li {
+  margin-bottom: 5px;
+}
+
+#result {
+  margin-top: 10px;
+}
+
 #courseTable {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 #courseTable th,
@@ -154,7 +173,7 @@ button#saveButton {
   border: none;
   /* padding: 10px 10px; */
   cursor: pointer;
-  margin: 5px; /* Center the buttons */
+  margin: 1px; /* Center the buttons */
 }
 
 #courseTable button i {
