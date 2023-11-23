@@ -26,3 +26,24 @@ GPA_Calculator_Web/
 ├── styles.css
 ├── script.js
 └── README.md
+
+## Example JSON Object:
+
+```json
+{
+  "courses": [
+    {
+      "name": "Course 1",
+      "credit": 3,
+      "grade": 4.0
+    },
+    {
+      "name": "Course 2",
+      "credit": 2,
+      "grade": 3.7
+    },
+    // ... (additional course objects) ...
+  ],
+  "cgpa": 3.85,
+  "credits": 5
+}
