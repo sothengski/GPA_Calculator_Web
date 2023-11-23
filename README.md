@@ -47,3 +47,12 @@ GPA_Calculator_Web/
   "cgpa": 3.85,
   "credits": 5
 }
+
+Add Course
+![Screenshot](https://github.com/sothengski/GPA_Calculator_Web/blob/main/Add.png)
+
+Edit Course
+![Screenshot](https://github.com/sothengski/GPA_Calculator_Web/blob/main/Edit.png)
+
+Delete Course
+![Screenshot](https://github.com/sothengski/GPA_Calculator_Web/blob/main/Delete.png)
