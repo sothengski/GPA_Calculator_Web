@@ -1,5 +1,6 @@
 let courses = [];
 let cgpa = 0.0;
+let totalCredits = 0;
 
 let editingIndex = -1; // Default value indicating no course is being edited
 
@@ -192,19 +193,34 @@ function updateCourseList() {
   //   console.log("UpdateList");
 }
 
+// Function to calculate and display total credit hours earned
+// function calculateTotalCredit() {
+//   const totalCreditElement = document.getElementById("totalCredit");
+//   const totalCredit = courses.reduce(
+//     (total, course) => total + course.credit,
+//     0
+//   );
+//   totalCreditElement.textContent = `Credit earned: ${totalCredit}`;
+// }
+
 function calculateCGPA() {
-  const totalCredits = courses.reduce(
-    (total, course) => total + course.credit,
-    0
-  );
+  // calculateTotalCredit();
+  // const totalCreditElement = document.getElementById("totalCredit");
+
+  // Calculate total Credits
+  totalCredits = courses.reduce((total, course) => total + course.credit, 0);
   const weightedGrades = courses.reduce(
     (total, course) => total + course.credit * course.grade,
     0
   );
-
+  // Calculate CGPA
   cgpa = (weightedGrades / totalCredits).toFixed(2);
 
   document.getElementById("cgpa").textContent = courses == 0 ? "0.00" : cgpa;
+  document.getElementById("totalCredit").textContent =
+    courses == 0 ? "0" : totalCredits;
+
+  // totalCreditElement.textContent = `Credit earned: ${totalCredit}`;
 }
 
 function saveData() {
@@ -218,6 +234,7 @@ function saveData() {
   const dataToSave = {
     courses: courses,
     cgpa: cgpa,
+    credits: totalCredits,
   };
   console.log(dataToSave);
 
@@ -262,12 +279,16 @@ function handleFileInputChange(event) {
         // Assuming the JSON structure has "courses" and "cgpa" properties
         const importedCourses = jsonData.courses;
         const importedCGPA = jsonData.cgpa;
+        const importedCredits = jsonData.credits;
 
         // Update the courses array with the imported data
         courses = importedCourses;
 
         // Update the CGPA display
         cgpa = importedCGPA;
+
+        // Update the Total Credits display
+        totalCredits = importedCredits;
         // (You may have a function that updates the UI with the calculated CGPA)
         updateCourseList();
         calculateCGPA();

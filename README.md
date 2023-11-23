@@ -19,11 +19,10 @@ A simple GPA (Grade Point Average) calculator implemented with HTML, CSS, and Ja
 
 ## File Structure
 
+```plaintext
 GPA_Calculator_Web/
 │
 ├── index.html
 ├── styles.css
 ├── script.js
 └── README.md
-
-
