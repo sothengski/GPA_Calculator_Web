@@ -30,13 +30,14 @@ GPA_Calculator_Web/
 ## Screenshots
 
 Add Course
-![Screenshot]([Add.png](https://github.com/sothengski/GPA_Calculator_Web/blob/f6438820e605f17759ba56874722ccbdecf762c5/Add.png))
+![Add Course Screenshot](https://github.com/sothengski/GPA_Calculator_Web/blob/f6438820e605f17759ba56874722ccbdecf762c5/Add.png)[(GitHub)](https://github.com/sothengski/GPA_Calculator_Web/blob/f6438820e605f17759ba56874722ccbdecf762c5/Add.png)
 
 Edit Course
-![Screenshot]([Edit.png](https://github.com/sothengski/GPA_Calculator_Web/blob/f6438820e605f17759ba56874722ccbdecf762c5/Edit.png))
+![Edit Course Screenshot](https://github.com/sothengski/GPA_Calculator_Web/blob/f6438820e605f17759ba56874722ccbdecf762c5/Edit.png)[(GitHub)](https://github.com/sothengski/GPA_Calculator_Web/blob/f6438820e605f17759ba56874722ccbdecf762c5/Edit.png)
+
 
 Delete Course
-![Screenshot]([Delete.png](https://github.com/sothengski/GPA_Calculator_Web/blob/f6438820e605f17759ba56874722ccbdecf762c5/Delete.png))
+![Edit Course Screenshot](https://github.com/sothengski/GPA_Calculator_Web/blob/f6438820e605f17759ba56874722ccbdecf762c5/Delete.png)[(GitHub)](https://github.com/sothengski/GPA_Calculator_Web/blob/f6438820e605f17759ba56874722ccbdecf762c5/Delete.png)
 
 ## Example JSON Object:
 
