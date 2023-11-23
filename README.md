@@ -30,14 +30,14 @@ GPA_Calculator_Web/
 ## Screenshots
 
 Add Course
-![Add Course Screenshot](Add.png)[(GitHub)](https://github.com/sothengski/GPA_Calculator_Web/blob/f6438820e605f17759ba56874722ccbdecf762c5/Add.png)
+![Add Course Screenshot](Add.png)[(GitHub)](Add.png)
 
 Edit Course
-![Edit Course Screenshot](Edit.png)[(GitHub)](https://github.com/sothengski/GPA_Calculator_Web/blob/f6438820e605f17759ba56874722ccbdecf762c5/Edit.png)
+![Edit Course Screenshot](Edit.png)[(GitHub)](Edit.png)
 
 
 Delete Course
-![Edit Course Screenshot](Delete.png)[(GitHub)](https://github.com/sothengski/GPA_Calculator_Web/blob/f6438820e605f17759ba56874722ccbdecf762c5/Delete.png)
+![Edit Course Screenshot](Delete.png)[(GitHub)](Delete.png)
 
 ## Example JSON Object:
 
