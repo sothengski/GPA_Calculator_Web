@@ -56,7 +56,7 @@ function addCourse() {
   // Clear the input fields
   courseNameInput.value = "";
   creditInput.value = "3";
-  gradeInput.value = "4.0";
+  gradeInput.value = 4.0;
 
   updateCourseList();
   calculateCGPA();
@@ -332,10 +332,12 @@ document.addEventListener("DOMContentLoaded", function () {
     .then((data) => {
       gradeScales = data.gradeScales;
       displayGradeScales(gradeScales);
+      populateGradeSelect(gradeScales);
     })
     .catch((error) => console.error("Error fetching and parsing JSON:", error));
 });
 
+// Display the GradeScales into the HTML GradeScalesTable
 function displayGradeScales(gradeScales) {
   const tableBody = document.querySelector("#GPAScaleTable tbody");
 
@@ -348,5 +350,22 @@ function displayGradeScales(gradeScales) {
     gradeCell.textContent = scale.grade;
     gpaValueCell.textContent = scale.gpaValue;
     // scaleDescriptionCell.textContent = scale.scaleDescription;
+  });
+}
+
+// Passing the GradeScales into the Select-Option in HTML
+function populateGradeSelect(gradeScales) {
+  const gradeSelect = document.getElementById("grade");
+
+  gradeScales.forEach((scale) => {
+    const option = document.createElement("option");
+    option.value = scale.gpaValue;
+    option.textContent = scale.grade;
+    gradeSelect.appendChild(option);
+
+    // Set 4.0 as the default selected option
+    if (scale.gpaValue === 4.0) {
+      option.selected = true;
+    }
   });
 }
