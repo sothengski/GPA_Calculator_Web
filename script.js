@@ -1,3 +1,4 @@
+let gradeScales = [];
 let courses = [];
 let cgpa = 0.0;
 let totalCredits = 0;
@@ -323,3 +324,29 @@ document.getElementById("importButton").addEventListener("click", importData);
 document
   .getElementById("fileInput")
   .addEventListener("change", handleFileInputChange);
+
+// Read the Json Grade Scales file
+document.addEventListener("DOMContentLoaded", function () {
+  fetch("grade_scales.json") // Replace with the correct path to your JSON file
+    .then((response) => response.json())
+    .then((data) => {
+      gradeScales = data.gradeScales;
+      displayGradeScales(gradeScales);
+    })
+    .catch((error) => console.error("Error fetching and parsing JSON:", error));
+});
+
+function displayGradeScales(gradeScales) {
+  const tableBody = document.querySelector("#GPAScaleTable tbody");
+
+  gradeScales.forEach((scale) => {
+    const row = tableBody.insertRow();
+    const gradeCell = row.insertCell(0);
+    const gpaValueCell = row.insertCell(1);
+    // const scaleDescriptionCell = row.insertCell(2);
+
+    gradeCell.textContent = scale.grade;
+    gpaValueCell.textContent = scale.gpaValue;
+    // scaleDescriptionCell.textContent = scale.scaleDescription;
+  });
+}
