@@ -1,0 +1,54 @@
+{
+    "gradeScales": [
+        {
+            "grade": "A",
+            "gpaValue": 4.0,
+            "scaleDescription": "Standard 4.0 Scale (U.S./Canada)"
+        },
+        {
+            "grade": "A-",
+            "gpaValue": 3.67,
+            "scaleDescription": "Standard 4.0 Scale (U.S./Canada)"
+        },
+        {
+            "grade": "B+",
+            "gpaValue": 3.33,
+            "scaleDescription": "Standard 4.0 Scale (U.S./Canada)"
+        },
+        {
+            "grade": "B",
+            "gpaValue": 3.0,
+            "scaleDescription": "Standard 4.0 Scale (U.S./Canada)"
+        },
+        {
+            "grade": "B-",
+            "gpaValue": 2.67,
+            "scaleDescription": "Standard 4.0 Scale (U.S./Canada)"
+        },
+        {
+            "grade": "C+",
+            "gpaValue": 2.33,
+            "scaleDescription": "Standard 4.0 Scale (U.S./Canada)"
+        },
+        {
+            "grade": "C",
+            "gpaValue": 2.0,
+            "scaleDescription": "Standard 4.0 Scale (U.S./Canada)"
+        },
+        {
+            "grade": "C-",
+            "gpaValue": 1.7,
+            "scaleDescription": "Standard 4.0 Scale (U.S./Canada)"
+        },
+        {
+            "grade": "D",
+            "gpaValue": 1.0,
+            "scaleDescription": "Standard 4.0 Scale (U.S./Canada)"
+        },
+        {
+            "grade": "F",
+            "gpaValue": 0.0,
+            "scaleDescription": "Standard 4.0 Scale (U.S./Canada)"
+        }
+    ]
+}
