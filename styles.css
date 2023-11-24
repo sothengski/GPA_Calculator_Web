@@ -37,6 +37,27 @@ body {
   width: 65%; /* Adjust the width as needed */
 }
 
+table {
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  border-radius: 5px; /* Added border-radius */
+  overflow: hidden; /* Ensures border-radius is applied to corners */
+  border-style: hidden; /* hide standard table (collapsed) border */
+  box-shadow: 0 0 0 0.5px #666; /* this draws the table border  */
+}
+th {
+  background-color: #3a5884;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #ebebeb;
+}
+tr:hover {
+  background-color: #d4f4f4;
+}
+
 #GPAScaleTable {
   width: 80%;
   border-collapse: collapse;
@@ -50,10 +71,10 @@ body {
   text-align: center;
 }
 
-#GPAScaleTable th {
+/* #GPAScaleTable th {
   background-color: #3a5884;
   color: white;
-}
+} */
 
 label {
   display: block;
@@ -152,10 +173,10 @@ button#importButton {
   text-align: left;
 }
 
-#courseTable th {
+/* #courseTable th {
   background-color: #82a6db;
   color: white;
-}
+} */
 
 /* .buttons-container {
   display: flex;
