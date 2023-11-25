@@ -103,6 +103,33 @@ button:hover {
   background-color: #45a049;
 }
 
+/* Style for the Save and Import buttons */
+#saveButton,
+#importButton {
+  /* Your existing styles for the buttons */
+  position: relative;
+}
+
+/* Tooltip styles */
+#saveButton:hover::after,
+#importButton:hover::after {
+  content: attr(
+    data-tooltip
+  ); /* Use the data-tooltip attribute as the content */
+  display: inline-block;
+  position: absolute;
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  border-radius: 3px;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  z-index: 1;
+  font-size: 14px;
+}
+
 #cancelEditButton {
   background-color: #e74c3c;
   color: #fff;

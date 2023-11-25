@@ -316,7 +316,9 @@ function calculateCGPA() {
 function saveData() {
   // Check if there are courses available
   if (courses.length === 0) {
-    alert("No courses available to save.");
+    // alert("No courses available to save.");
+    showAlert("No courses available to save.");
+
     return;
   }
 
