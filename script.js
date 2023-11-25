@@ -14,11 +14,16 @@ function addCourse() {
   const creditInput = document.getElementById("credit");
   const gradeInput = document.getElementById("grade");
 
+  // Getting Index of Select option and text of the grade
+  const selectedGradeIndex = gradeInput.selectedIndex;
+  const selectedGrade = gradeInput.options[selectedGradeIndex].textContent;
+  // const selectedGPAValue = gradeInput.value;
+
   const courseName = courseNameInput.value;
   const credit = parseFloat(creditInput.value);
-  const grade = parseFloat(gradeInput.value);
+  const gpaValue = parseFloat(gradeInput.value);
 
-  if (courseName === "" || isNaN(credit) || isNaN(grade)) {
+  if (courseName === "" || isNaN(credit) || isNaN(gpaValue)) {
     alert("Please fill in all fields with valid values.");
     return;
   }
@@ -28,7 +33,8 @@ function addCourse() {
     const course = {
       name: courseName,
       credit: credit,
-      grade: grade,
+      grade: selectedGrade,
+      gpaValue: gpaValue,
     };
 
     courses.push(course);
@@ -43,7 +49,8 @@ function addCourse() {
     // Editing an existing course
     courses[editingIndex].name = courseName;
     courses[editingIndex].credit = credit;
-    courses[editingIndex].grade = grade;
+    courses[editingIndex].grade = selectedGrade;
+    courses[editingIndex].gpaValue = gpaValue;
 
     // Reset editingIndex
     editingIndex = -1;
@@ -83,7 +90,7 @@ function editCourse(index) {
 
   const gradeSelect = document.getElementById("grade");
   for (let i = 0; i < gradeSelect.options.length; i++) {
-    if (parseFloat(gradeSelect.options[i].value) === editedCourse.grade) {
+    if (parseFloat(gradeSelect.options[i].value) === editedCourse.gpaValue) {
       gradeSelect.selectedIndex = i;
       break;
     }
@@ -224,7 +231,7 @@ function calculateCGPA() {
   // Calculate total Credits
   totalCredits = courses.reduce((total, course) => total + course.credit, 0);
   const weightedGrades = courses.reduce(
-    (total, course) => total + course.credit * course.grade,
+    (total, course) => total + course.credit * course.gpaValue,
     0
   );
   // Calculate CGPA
