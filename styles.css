@@ -218,3 +218,56 @@ button#importButton {
 #courseTable button.delete {
   background-color: #e74c3c; /* Update color for the Delete button to red */
 }
+
+/* Center the dialog */
+.dialog-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* Style for the dialog */
+.dialog {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center; /* Center text content */
+}
+
+/* Style for the confirmation buttons */
+.confirm-buttons {
+  display: flex;
+  justify-content: center; /* Center buttons */
+  margin-top: 10px;
+}
+
+/* Center the OK button in the alert dialog */
+.dialog button {
+  margin: 0 auto;
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+#yes-btn {
+  background-color: #e74c3c;
+}
+
+#no-btn {
+  background-color: #45a049;
+}
+
+/* Style for the overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}

@@ -85,7 +85,7 @@
             <thead>
               <tr>
                 <th>Grade</th>
-                <th>GPA Value</th>
+                <th>GPA Scale</th>
               </tr>
             </thead>
             <tbody>
@@ -186,6 +186,33 @@
             </td>
           </tbody>
         </table>
+      </div>
+    </div>
+
+    <!-- Overlay and Dialog for alert -->
+    <div class="overlay" id="alertOverlay">
+      <div class="dialog-container">
+        <div class="dialog">
+          <p id="alertMessage"></p>
+          <button onclick="closeAlert()">OK</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Overlay and Dialog for confirmation -->
+    <div class="overlay" id="confirmOverlay">
+      <div class="dialog-container">
+        <div class="dialog">
+          <p id="confirmMessage"></p>
+          <div class="confirm-buttons">
+            <button id="yes-btn" onclick="confirmAction(true)">
+              Yes, delete it
+            </button>
+            <button id="no-btn" onclick="confirmAction(false)">
+              No, keep it
+            </button>
+          </div>
+        </div>
       </div>
     </div>
 

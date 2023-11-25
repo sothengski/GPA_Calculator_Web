@@ -25,7 +25,8 @@ function addCourse() {
   const gpaValue = parseFloat(gradeInput.value);
 
   if (courseName === "" || isNaN(credit) || isNaN(gpaValue)) {
-    alert("Please fill in all fields with valid values.");
+    // alert("Please fill in all fields with valid values.");
+    showAlert("Please fill in all fields with valid values.");
     return;
   }
 
@@ -155,24 +156,51 @@ function resetEditingState() {
 
 function deleteCourse(index) {
   // Prompt the user for confirmation before deleting the course
-  const confirmation = confirm("Are you sure you want to delete this course?");
+  // const confirmation = confirm("Are you sure you want to delete this course?");
 
-  if (confirmation) {
-    // Remove the selected course from the array
-    courses.splice(index, 1);
+  // if (confirmation) {
+  //   // Remove the selected course from the array
+  //   courses.splice(index, 1);
 
-    // Reset editingIndex
-    editingIndex = -1;
+  //   // Reset editingIndex
+  //   editingIndex = -1;
 
-    // Change the button back to "Add Course"
-    document.getElementById("addButton").textContent = "Add Course";
-    document.getElementById("addButton").style = "background-color: #6FB262";
+  //   // Change the button back to "Add Course"
+  //   document.getElementById("addButton").textContent = "Add Course";
+  //   document.getElementById("addButton").style = "background-color: #6FB262";
 
-    // Update the course list and CGPA
-    updateCourseList();
-    calculateCGPA();
-    // console.log("Delete");
-  }
+  //   // Update the course list and CGPA
+  //   updateCourseList();
+  //   calculateCGPA();
+  //   // console.log("Delete");
+  // }
+
+  showConfirmation(
+    "Are you sure you want to delete this course?",
+    function (isConfirmed) {
+      if (isConfirmed) {
+        // User clicked 'Yes', perform the action
+        // console.log("Action confirmed!");
+        // Remove the selected course from the array
+        courses.splice(index, 1);
+
+        // Reset editingIndex
+        editingIndex = -1;
+
+        // Change the button back to "Add Course"
+        document.getElementById("addButton").textContent = "Add Course";
+        document.getElementById("addButton").style =
+          "background-color: #6FB262";
+
+        // Update the course list and CGPA
+        updateCourseList();
+        calculateCGPA();
+      } else {
+        // User clicked 'No', handle accordingly
+        // console.log("Action canceled.");
+      }
+    }
+  );
 }
 
 // function updateCourseList() {
@@ -355,10 +383,12 @@ function handleFileInputChange(event) {
         updateCourseList();
         calculateCGPA();
 
-        alert("Data imported successfully!");
+        // alert("Data imported successfully!");
+        showAlert("Data imported successfully!");
       } catch (error) {
         console.error("Error parsing JSON file:", error);
-        alert("Error importing data. Please check the file format.");
+        // alert("Error importing data. Please check the file format.");
+        showAlert("Error importing data. Please check the file format.");
       }
     };
 
@@ -417,3 +447,58 @@ function populateGradeSelect(gradeScales) {
     }
   });
 }
+
+// Function to show alert dialog
+function showAlert(message) {
+  const alertOverlay = document.getElementById("alertOverlay");
+  const alertMessage = document.getElementById("alertMessage");
+
+  alertMessage.textContent = message;
+  alertOverlay.style.display = "flex";
+}
+
+// Function to close alert dialog
+function closeAlert() {
+  const alertOverlay = document.getElementById("alertOverlay");
+  alertOverlay.style.display = "none";
+}
+
+// Function to show confirmation dialog
+function showConfirmation(message, callback) {
+  const confirmOverlay = document.getElementById("confirmOverlay");
+  const confirmMessage = document.getElementById("confirmMessage");
+
+  confirmMessage.textContent = message;
+  confirmOverlay.style.display = "flex";
+
+  // Set the callback function for the confirmation action
+  confirmActionCallback = callback;
+}
+
+// Function to handle confirmation action
+function confirmAction(isConfirmed) {
+  const confirmOverlay = document.getElementById("confirmOverlay");
+  confirmOverlay.style.display = "none";
+
+  // Call the callback function with the result
+  if (confirmActionCallback) {
+    confirmActionCallback(isConfirmed);
+    confirmActionCallback = null; // Reset the callback
+  }
+}
+
+// Example of using the showAlert and showConfirmation functions
+// showAlert('This is an alert!');
+
+// Example of using showConfirmation with a callback function
+/*
+showConfirmation('Do you want to proceed?', function(isConfirmed) {
+  if (isConfirmed) {
+      // User clicked 'Yes', perform the action
+      console.log('Action confirmed!');
+  } else {
+      // User clicked 'No', handle accordingly
+      console.log('Action canceled.');
+  }
+});
+*/
