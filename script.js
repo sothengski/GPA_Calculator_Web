@@ -4,6 +4,7 @@ let cgpa = 0.0;
 let totalCredits = 0;
 
 let editingIndex = -1; // Default value indicating no course is being edited
+let editingCourse = false;
 
 function addCourse() {
   //   const courseName = document.getElementById("courseName").value;
@@ -45,6 +46,14 @@ function addCourse() {
     //   credit: credit,
     //   grade: grade,
     // };
+    // Update the existing row if editing
+    // updateCourse(
+    //   editedRowIndex,
+    //   courseName,
+    //   credit,
+    //   selectedGrade,
+    //   selectedGPAValue
+    // );
 
     // Editing an existing course
     courses[editingIndex].name = courseName;
@@ -55,9 +64,7 @@ function addCourse() {
     // Reset editingIndex
     editingIndex = -1;
 
-    // Change the button back to "Add Course"
-    addButton.textContent = "Add Course";
-    addButton.style = "background-color: #6FB262";
+    cancelEditCourse();
   }
 
   // Clear the input fields
@@ -80,6 +87,12 @@ function editCourse(index) {
   creditInput.value = "";
   gradeInput.value = "";
 
+  // Show the "Cancel Edit" button and hide the "Add Course" button
+  document.getElementById("cancelEditButton").style.display = "inline";
+  // document.querySelector('button[type="button"]').style.display = "none";
+
+  // Set editing state
+  editingCourse = true;
   editingIndex = index;
   const editedCourse = courses[index];
 
@@ -110,6 +123,34 @@ function editCourse(index) {
   //   updateCourseList();
   //   calculateCGPA();
   //   console.log("Edit");
+}
+
+function cancelEditCourse() {
+  const courseNameInput = document.getElementById("courseName");
+  const creditInput = document.getElementById("credit");
+  const gradeInput = document.getElementById("grade");
+
+  // Clear the form and reset editing state
+  // document.getElementById("courseForm").reset();
+  // Clear the input fields
+  courseNameInput.value = "";
+  creditInput.value = "3";
+  gradeInput.value = 4.0;
+  resetEditingState();
+}
+
+function resetEditingState() {
+  // Reset editing state
+  editingCourse = false;
+  editingIndex = -1;
+
+  // Change the button back to "Add Course"
+  addButton.textContent = "Add Course";
+  addButton.style = "background-color: #6FB262";
+
+  // Hide the "Cancel Edit" button and show the "Add Course" button
+  document.getElementById("cancelEditButton").style.display = "none";
+  // document.querySelector('button[type="button"]').style.display = "inline";
 }
 
 function deleteCourse(index) {
