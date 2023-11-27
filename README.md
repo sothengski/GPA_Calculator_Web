@@ -24,20 +24,29 @@ GPA_Calculator_Web/
 ├── index.html
 ├── styles.css
 ├── script.js
+├── grade_scales.json
 └── README.md
 ```
 
 ## Screenshots
 
-Add Course
-![Add Course Screenshot](Add.png)[(GitHub)](Add.png)
+GPA Calculator
+![GPA Calculator Screenshot](images/GPACalculator.png)
 
-Edit Course
-![Edit Course Screenshot](Edit.png)[(GitHub)](Edit.png)
+Add the Course with the dialog Validation
+![Add the Course Screenshot](images/AddCourseWithInputValidation.png)
 
+List all the Courses
+![Course Listing Screenshot](images/CourseList.png)
 
-Delete Course
-![Edit Course Screenshot](Delete.png)[(GitHub)](Delete.png)
+Edit the Course
+![Edit the Course Screenshot](images/Edit.png)
+
+Delete the Course withe the confirmation dialog
+![Delete the Course Screenshot](images/DeleteCourseWithConfirmation.png)
+
+Save Courses data to Json file with the empty data alert dialog
+![Save Data to Json file Screenshot](images/SaveJsonAlertDialog.png)
 
 ## Example JSON Object:
 
@@ -45,18 +54,19 @@ Delete Course
 {
   "courses": [
     {
-      "name": "Course 1",
+      "name": "HTML",
       "credit": 3,
-      "grade": 4.0
+      "grade": "A",
+      "gpaValue": 4
     },
     {
-      "name": "Course 2",
-      "credit": 2,
-      "grade": 3.7
-    },
-    // ... (additional course objects) ...
+      "name": "CSS",
+      "credit": 3,
+      "grade": "B",
+      "gpaValue": 3
+    }
   ],
-  "cgpa": 3.85,
-  "credits": 5
+  "cgpa": "3.50",
+  "credits": 6
 }
 ```
