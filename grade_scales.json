@@ -3,51 +3,71 @@
         {
             "grade": "A",
             "gpaValue": 4.0,
+            "minScore": 85,
+            "maxScore": 100,
             "scaleDescription": "Standard 4.0 Scale (U.S./Canada)"
         },
         {
             "grade": "A-",
             "gpaValue": 3.67,
+            "minScore": 80,
+            "maxScore": 84,
             "scaleDescription": "Standard 4.0 Scale (U.S./Canada)"
         },
         {
             "grade": "B+",
             "gpaValue": 3.33,
+            "minScore": 77,
+            "maxScore": 79,
             "scaleDescription": "Standard 4.0 Scale (U.S./Canada)"
         },
         {
             "grade": "B",
             "gpaValue": 3.0,
+            "minScore": 73,
+            "maxScore": 76,
             "scaleDescription": "Standard 4.0 Scale (U.S./Canada)"
         },
         {
             "grade": "B-",
             "gpaValue": 2.67,
+            "minScore": 70,
+            "maxScore": 72,
             "scaleDescription": "Standard 4.0 Scale (U.S./Canada)"
         },
         {
             "grade": "C+",
             "gpaValue": 2.33,
+            "minScore": 65,
+            "maxScore": 69,
             "scaleDescription": "Standard 4.0 Scale (U.S./Canada)"
         },
         {
             "grade": "C",
             "gpaValue": 2.0,
+            "minScore": 60,
+            "maxScore": 64,
             "scaleDescription": "Standard 4.0 Scale (U.S./Canada)"
         },
         {
             "grade": "C-",
             "gpaValue": 1.7,
+            "minScore": 55,
+            "maxScore": 59,
             "scaleDescription": "Standard 4.0 Scale (U.S./Canada)"
         },
         {
             "grade": "D",
             "gpaValue": 1.0,
+            "minScore": 50,
+            "maxScore": 54,
             "scaleDescription": "Standard 4.0 Scale (U.S./Canada)"
         },
         {
             "grade": "F",
             "gpaValue": 0.0,
+            "minScore": 0,
+            "maxScore": 49,
             "scaleDescription": "Standard 4.0 Scale (U.S./Canada)"
         }
     ]
